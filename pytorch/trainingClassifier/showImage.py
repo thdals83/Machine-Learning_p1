@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import torchvision
-from imageDownload import trainloader
+from imageDownload import trainloader, classes
 
 
 def imshow(img):
@@ -12,8 +12,8 @@ def imshow(img):
 
 
 # get some random training images
-dataiter = iter(trainloader)
-# images, labels = dataiter.next()
-
-# imshow(torchvision.utils.make_grid(images))
-# print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
+if __name__ == '__main__':
+    dataiter = iter(trainloader)
+    images, labels = dataiter.next()
+    imshow(torchvision.utils.make_grid(images))
+    print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
