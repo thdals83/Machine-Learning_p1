@@ -15,5 +15,5 @@ def imshow(img):
 if __name__ == '__main__':
     dataiter = iter(trainloader)
     images, labels = dataiter.next()
-    imshow(torchvision.utils.make_grid(images))
     print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
+    imshow(torchvision.utils.make_grid(images))
