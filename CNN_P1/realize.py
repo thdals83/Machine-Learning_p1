@@ -1,7 +1,10 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-from sklearn.datasets import load_diabetes
-diabetes=load_diabetes()
 
-print(diabetes.data.shape,diabetes.target.shape)
-x=diabetes.data[:,2]
-y=diabetes.target
+titanic=pd.read_csv('titanic.csv')
+
+print(titanic.loc[[2,5,9]])
+titanic.loc[[2,5,9]]
